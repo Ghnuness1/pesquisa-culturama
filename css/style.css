@@ -50,9 +50,7 @@ legend {
 }
 
 label {
-  display: inline-block;
   margin-bottom: 5px;
-  font-size: 15px;
 }
 
 p {
@@ -94,16 +92,22 @@ textarea:valid {
   border-color: green;
 }
 
+.radio-item,
 .checkbox-item {
   display: flex;
   align-items: center;
-  gap: 8px; /* controla o espaço entre checkbox e o texto */
+  gap: 8px;
   margin-bottom: 8px;
 }
 
+.radio-item input[type="radio"],
 .checkbox-item input[type="checkbox"] {
+  flex-shrink: 0;
   margin: 0;
-  flex-shrink: 0; /* impede o checkbox de “encolher” no mobile */
+}
+
+.checkbox-item:last-of-type {
+  margin-bottom: 15px;
 }
 
 button {

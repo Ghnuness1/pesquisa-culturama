@@ -50,26 +50,37 @@
               pattern="[0-9]{11}"
               placeholder="DDD + número sem espaços ou hífen"
             />
-            <br />
             <label for="image">Upload de foto</label>
             <input id="image" type="file" name="userImage" />
-            <br />
           </fieldset>
+          <!-- PERFIL -->
           <fieldset>
             <legend>Perfil</legend>
             <p>Gênero:</p>
-            <input id="masc" type="radio" name="userGender" value="masculino" />
-            <label for="masc">Masculino</label>
-            <input id="fem" type="radio" name="userGender" value="feminino" />
-            <label for="fem">Feminino</label>
-            <input
-              id="notInformed"
-              type="radio"
-              name="userGender"
-              value="notInformed"
-            />
-            <label for="notInformed">Prefiro não informar</label>
-            <br />
+            <div class="radio-item">
+              <input
+                id="masc"
+                type="radio"
+                name="userGender"
+                value="masculino"
+              />
+              <label for="masc">Masculino</label>
+            </div>
+
+            <div class="radio-item">
+              <input id="fem" type="radio" name="userGender" value="feminino" />
+              <label for="fem">Feminino</label>
+            </div>
+
+            <div class="radio-item">
+              <input
+                id="notInformed"
+                type="radio"
+                name="userGender"
+                value="notInformed"
+              />
+              <label for="notInformed">Prefiro não informar</label>
+            </div>
             <label for="maritalStatus">Estado civil:</label>
             <select id="maritalStatus" name="userMaritalStatus">
               <option value="notInformed">Selecione...</option>
@@ -109,40 +120,38 @@
               <option value="sergipe">Sergipe</option>
               <option value="tocantins">Tocantins</option>
             </select>
-            <br />
             <label for="city">Cidade:</label>
             <input id="city" type="text" name="userCity" />
           </fieldset>
+          <!-- HABITOS -->
           <fieldset>
             <legend>Hábitos</legend>
             <p>Redes Sociais:</p>
-            <input
-              id="instagram"
-              type="checkbox"
-              name="social"
-              value="instagram"
-            />
-            <label for="instagram">Instagram</label>
-            <br />
-            <input
-              id="facebook"
-              type="checkbox"
-              name="social"
-              value="facebook"
-            />
-            <label for="facebook">Facebook</label>
-            <br />
-            <input
-              id="linkedIn"
-              type="checkbox"
-              name="social"
-              value="linkedIn"
-            />
-            <label for="linkedIn">Linkedin</label>
-            <br />
-            <input id="x" type="checkbox" name="social" value="x" />
-            <label for="x">X</label>
-            <br />
+
+            <div class="checkbox-item">
+              <input
+                type="checkbox"
+                id="insta"
+                name="social"
+                value="instagram"
+              />
+              <label for="insta">Instagram</label>
+            </div>
+
+            <div class="checkbox-item">
+              <input type="checkbox" id="face" name="social" value="facebook" />
+              <label for="face">Facebook</label>
+            </div>
+
+            <div class="checkbox-item">
+              <input type="checkbox" id="link" name="social" value="linkedIn" />
+              <label for="link">LinkedIn</label>
+            </div>
+
+            <div class="checkbox-item">
+              <input type="checkbox" id="x" name="social" value="x" />
+              <label for="x">X</label>
+            </div>
             <label for="musicStyle">Estilo musical:</label>
             <input
               list="styleTipes"
@@ -156,68 +165,78 @@
               <option value="Samba"></option>
               <option value="Sertanejo"></option>
             </datalist>
-            <br />
             <label for="favoriteColor">Cor favorita:</label>
             <input id="favoriteColor" type="color" name="userFavoriteColor" />
           </fieldset>
+          <!-- OPINIÃO -->
           <fieldset>
             <legend>Opinião</legend>
             <p>O que você acha da qualidade do nosso serviço?</p>
-            <input
-              id="otimo"
-              type="radio"
-              name="userServiceOpinion"
-              value="otima"
-            />
-            <label for="otimo">Ótima</label>
-            <br />
-            <input
-              id="boa"
-              type="radio"
-              name="userServiceOpinion"
-              value="boa"
-            />
-            <label for="boa">Boa</label>
-            <br />
-            <input
-              id="regular"
-              type="radio"
-              name="userServiceOpinion"
-              value="regular"
-            />
-            <label for="regular">Regular</label>
-            <br />
-            <input
-              id="ruim"
-              type="radio"
-              name="userServiceOpinion"
-              value="ruim"
-            />
-            <label for="ruim">Ruim</label>
-            <br />
+            <div class="radio-item">
+              <input
+                type="radio"
+                id="opOtima"
+                name="userServiceOpinion"
+                value="otima"
+              />
+              <label for="opOtima">Ótima</label>
+            </div>
+
+            <div class="radio-item">
+              <input
+                type="radio"
+                id="opBoa"
+                name="userServiceOpinion"
+                value="boa"
+              />
+              <label for="opBoa">Boa</label>
+            </div>
+
+            <div class="radio-item">
+              <input
+                type="radio"
+                id="opRegular"
+                name="userServiceOpinion"
+                value="regular"
+              />
+              <label for="opRegular">Regular</label>
+            </div>
+
+            <div class="radio-item">
+              <input
+                type="radio"
+                id="opRuim"
+                name="userServiceOpinion"
+                value="ruim"
+              />
+              <label for="opRuim">Ruim</label>
+            </div>
             <label for="comment">Escreva sua opinião:</label>
-            <br />
             <textarea
               id="comment"
               name="userComment"
               placeholder="Digite aqui sua opinião..."
             ></textarea>
           </fieldset>
+          <!-- CONFIRMAÇÕES -->
           <fieldset>
             <legend>Confirmações</legend>
-            <label class="checkbox-item">
+            <div class="checkbox-item">
               <input
                 type="checkbox"
                 id="userLgpdTerm"
                 name="userLgpd"
                 required
               />
-              Eu aceito participar da pesquisa
-            </label>
-            <label class="checkbox-item">
+              <label for="userLgpdTerm">Eu aceito participar da pesquisa</label>
+            </div>
+
+            <div class="checkbox-item">
               <input type="checkbox" id="getResult" name="userGetResult" />
-              Desejo receber o resultado por e-mail
-            </label>
+              <label for="getResult"
+                >Desejo receber o resultado por e-mail</label
+              >
+            </div>
           </fieldset>
           <button type="submit">Enviar</button>
           <button type="reset">Limpar</button>
