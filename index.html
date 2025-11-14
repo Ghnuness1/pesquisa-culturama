@@ -205,23 +205,19 @@
           </fieldset>
           <fieldset>
             <legend>Confirmações</legend>
-            <input
-              id="userLgpdTerm"
-              type="checkbox"
-              name="userLgpd"
-              value="confirmed"
-              required
-            />
-            <label for="userLgpdTerm">Eu aceito participar da pesquisa</label>
-            <br />
-            <input
-              id="getResult"
-              type="checkbox"
-              name="userGetResult"
-              value="confirmed"
-            />
-            <label for="getResult">Desejo receber o resultado por e-mail</label>
-            <br />
+            <label class="checkbox-item">
+              <input
+                type="checkbox"
+                id="userLgpdTerm"
+                name="userLgpd"
+                required
+              />
+              Eu aceito participar da pesquisa
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" id="getResult" name="userGetResult" />
+              Desejo receber o resultado por e-mail
+            </label>
           </fieldset>
           <button type="submit">Enviar</button>
           <button type="reset">Limpar</button>

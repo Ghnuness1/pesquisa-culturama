@@ -94,6 +94,18 @@ textarea:valid {
   border-color: green;
 }
 
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* controla o espaço entre checkbox e o texto */
+  margin-bottom: 8px;
+}
+
+.checkbox-item input[type="checkbox"] {
+  margin: 0;
+  flex-shrink: 0; /* impede o checkbox de “encolher” no mobile */
+}
+
 button {
   width: 100px;
   height: 30px;
